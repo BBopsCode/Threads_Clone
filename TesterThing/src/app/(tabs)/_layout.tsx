@@ -11,7 +11,7 @@ export default function TabsLayout() {
         tabBarShowLabel: false,
         // You can also adjust tab bar height to accommodate larger icons
         tabBarStyle: {
-          marginBottom: 15,
+          paddingBottom: 70,
           paddingTop: 10,
           height: 60, // Increased from default (usually around 50)
         }
