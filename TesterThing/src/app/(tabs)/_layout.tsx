@@ -1,10 +1,11 @@
 import { Tabs } from "expo-router";
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { useTheme } from "@react-navigation/native";
 
 export default function TabsLayout() {
   // Define a custom larger size for your icons
   const largerIconSize = 30; // Increased from default (usually 24 or 25)
-
+  const { colors } = useTheme();
   return (
     <Tabs
       screenOptions={{
@@ -14,7 +15,9 @@ export default function TabsLayout() {
           paddingBottom: 70,
           paddingTop: 10,
           height: 60, // Increased from default (usually around 50)
-        }
+        },
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.text
       }}
     >
       <Tabs.Screen name="index" options={{
