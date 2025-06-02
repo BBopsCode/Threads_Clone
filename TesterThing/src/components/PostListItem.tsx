@@ -60,23 +60,25 @@ export default function PostListItem({ workout }: { workout: Workout }) {
                 </Text>
             </View>
 
-            {/* Comments section */}
-            {workout.comments.length > 0 && (
-                <View className="mt-2 flex-row items-center">
-                    <Ionicons name="chatbubble-outline" size={20} color="#9CA3AF" />
-                    <Text className="text-gray-400 text-lg ml-1">
-                        {workout.comments.length}
-                    </Text>
-                </View>
-            )}
-            {workout.encouragements > 0 && (
-                <View className="mt-2 flex-row items-center">
-                    <Ionicons name="heart-outline" size={20} color="#9CA3AF" />
-                    <Text className="text-gray-400 text-lg ml-1">
-                        {workout.encouragements}
-                    </Text>
-                </View>
-            )}
+            {/* Comments and Encouragements section */}
+            <View className="mt-2 flex-row items-center">
+                {workout.comments.length > 0 && (
+                    <View className="flex-row items-center">
+                        <Ionicons name="chatbubble-outline" size={20} color="#9CA3AF" />
+                        <Text className="text-gray-400 text-lg ml-1">
+                            {workout.comments.length}
+                        </Text>
+                    </View>
+                )}
+                {workout.encouragements > 0 && (
+                    <View className="flex-row items-center ml-4">
+                        <Text className="text-gray-400 text-base ml-1">💪</Text>
+                        <Text className="text-gray-400 text-lg ml-1">
+                            {workout.encouragements}
+                        </Text>
+                    </View>
+                )}
+            </View>
 
             {/* Timestamp */}
             <Text className="text-gray-500 text-xs mt-2">
