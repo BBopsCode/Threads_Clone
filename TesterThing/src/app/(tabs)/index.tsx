@@ -3,18 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text className='text-3xl text-blue-500'>Feed</Text>
+    <View>
+      <Text className='text-3xl font-bold text-blue-300 p-10'>Hello World</Text>
+      
+      <Text></Text>
       <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
