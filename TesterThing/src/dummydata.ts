@@ -44,7 +44,8 @@ export const dummyWorkouts: Workout[] = [
         updated_at: "2024-03-15T08:35:00Z",
         user_id: "1",
         user: dummyUsers[0],
-        comments: []
+        comments: [],
+        encouragements: 6
     },
     {
         id: "2",
@@ -56,7 +57,8 @@ export const dummyWorkouts: Workout[] = [
         updated_at: "2024-03-14T16:50:00Z",
         user_id: "2",
         user: dummyUsers[1],
-        comments: []
+        comments: [],
+        encouragements: 9
     },
     {
         id: "3",
@@ -68,7 +70,8 @@ export const dummyWorkouts: Workout[] = [
         updated_at: "2024-03-13T20:00:00Z",
         user_id: "3",
         user: dummyUsers[2],
-        comments: []
+        comments: [],
+        encouragements: 5
     },
     {
         id: "4",
@@ -80,55 +83,60 @@ export const dummyWorkouts: Workout[] = [
         updated_at: "2024-03-12T17:25:00Z",
         user_id: "4",
         user: dummyUsers[3],
-        comments: []
+        comments: [],
+        encouragements: 12
     },
     {
         id: "5",
         name: "5K Run",
         description: "Morning run around the park",
         goal: 25,
-        completed_amount: 25,
+        completed_amount: 24,
         created_at: "2024-03-11T06:00:00Z",
         updated_at: "2024-03-11T06:30:00Z",
         user_id: "5",
         user: dummyUsers[4],
-        comments: []
+        comments: [],
+        encouragements: 8
     },
     {
         id: "6",
         name: "Leg Day",
         description: "Squats, lunges, and deadlifts",
         goal: 60,
-        completed_amount: 60,
+        completed_amount: 29,
         created_at: "2024-03-10T15:00:00Z",
         updated_at: "2024-03-10T16:05:00Z",
         user_id: "1",
         user: dummyUsers[0],
-        comments: []
+        comments: [],
+        encouragements: 10
     },
     {
         id: "7",
         name: "Core Crusher",
         description: "Ab workout with planks and crunches",
         goal: 30,
-        completed_amount: 30,
+        completed_amount: 8,
         created_at: "2024-03-09T12:00:00Z",
         updated_at: "2024-03-09T12:35:00Z",
         user_id: "2",
         user: dummyUsers[1],
-        comments: []
+        comments: [],
+        encouragements: 10
     },
     {
         id: "8",
         name: "Meditation Session",
         description: "Guided meditation for stress relief",
         goal: 20,
-        completed_amount: 20,
+        completed_amount: 29,
         created_at: "2024-03-08T21:00:00Z",
         updated_at: "2024-03-08T21:20:00Z",
         user_id: "3",
         user: dummyUsers[2],
-        comments: []
+        comments: [],
+        encouragements: 4
     },
     {
         id: "9",
@@ -140,19 +148,21 @@ export const dummyWorkouts: Workout[] = [
         updated_at: "2024-03-07T18:50:00Z",
         user_id: "4",
         user: dummyUsers[3],
-        comments: []
+        comments: [],
+        encouragements: 6
     },
     {
         id: "10",
         name: "Hill Sprints",
         description: "10 hill sprints with 2-minute rest between",
         goal: 30,
-        completed_amount: 30,
+        completed_amount: 20,
         created_at: "2024-03-06T07:00:00Z",
         updated_at: "2024-03-06T07:35:00Z",
         user_id: "5",
         user: dummyUsers[4],
-        comments: []
+        comments: [],
+        encouragements: 65
     }
 ];
 

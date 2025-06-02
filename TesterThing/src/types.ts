@@ -19,6 +19,7 @@ export type Workout = {
     user: User;
 
     comments: Comment[];
+    encouragements: number;
 }
 
 export type Comment = {
