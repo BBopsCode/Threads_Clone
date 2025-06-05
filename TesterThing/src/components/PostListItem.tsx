@@ -1,13 +1,18 @@
 import { View, Text, Image } from "react-native";
 import { Workout } from "@/types";
 import { Ionicons } from '@expo/vector-icons';
+import { myTheme } from "@/myTheme";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.extend(relativeTime);
 
 export default function PostListItem({ workout }: { workout: Workout }) {
     const isCompleted = workout.completed_amount === workout.goal;
     const isExceeded = workout.completed_amount > workout.goal;
     
     return (
-        <View className="p-4 border-b border-gray-800 bg-gray-900">
+        <View className="p-4 border-b border-gray-800 bg-[#101010]">
             {/* User info and post header */}
             <View className="flex-row items-center mb-2">
                 <Image 
@@ -15,8 +20,16 @@ export default function PostListItem({ workout }: { workout: Workout }) {
                     className="w-10 h-10 rounded-full mr-3"
                 />
                 <View>
-                    <Text className="font-bold text-base text-gray-100">{workout.user.name}</Text>
-                    <Text className="text-gray-400 text-sm">@{workout.user.username}</Text>
+                    {/* Timestamp */}
+               <View className="flex-row justify-between">
+                    <View>
+                        <Text className="font-bold text-base text-gray-100">{workout.user.name}</Text>
+                        <Text className="text-gray-400 text-sm">@{workout.user.username}</Text>
+                    </View>
+                    <Text className="text-gray-500 text-5xs ml-3">
+                        {dayjs(workout.created_at).fromNow()}
+                    </Text>
+                </View>
                 </View>
             </View>
 
@@ -72,18 +85,13 @@ export default function PostListItem({ workout }: { workout: Workout }) {
                 )}
                 {workout.encouragements > 0 && (
                     <View className="flex-row items-center ml-4">
-                        <Text className="text-gray-400 text-base ml-1">💪</Text>
+                        <Ionicons name="flash-outline" size={20} color="#9CA3AF" />
                         <Text className="text-gray-400 text-lg ml-1">
                             {workout.encouragements}
                         </Text>
                     </View>
                 )}
             </View>
-
-            {/* Timestamp */}
-            <Text className="text-gray-500 text-xs mt-2">
-                {new Date(workout.created_at).toLocaleDateString()}
-            </Text>
         </View>
     );
 }
